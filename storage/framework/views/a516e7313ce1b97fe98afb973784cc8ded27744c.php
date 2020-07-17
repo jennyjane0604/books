@@ -1,0 +1,53 @@
+<?php $__env->startSection('titletext'); ?>
+     New Message Entry
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('pageContent'); ?>
+    <section class="row" style="margin: 0;">
+
+         <section class="col-sm-2" style="margin: 0;"></section>
+         <section class="col-sm-8" style="margin: 0;">
+             <form action="<?php echo e(url('/')); ?>" method="post">
+                 <?php echo e(csrf_field()); ?>
+
+                 <table class="table">
+                     <tr>
+                         <td class="form-group">
+                           <section class="form-text">Guest Name</section>
+                         </td>
+                         <td class="form-group">
+                           <section><input type="text" name="guestname" size="30" class="form-control"></section>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td class="form-group">
+                           <section class="form-text">Message</section>
+                         </td>
+                         <td class="form-group">
+                           <section><textarea name="message" id="" cols="20" rows="10" draggable="false" style="resize:none;" class="form-control"></textarea></section>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td colspan="2">
+                             <section style="text-align: center;">
+                                 <button type="submit" class="btn btn-primary">Submit</button>
+                                 <button type="reset" class="btn btn-danger">Clear</button>
+                             </section>
+                         </td>
+                     </tr>
+
+
+
+
+
+
+
+
+                 </table>
+             </form>
+         </section>
+         <section class="col-sm-2" style="margin: 0;"></section>
+    </section>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('message.messageLayout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH I:\dev\laravel\myproject\resources\views/message/messageCreate.blade.php ENDPATH**/ ?>
